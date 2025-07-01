@@ -1,7 +1,7 @@
 
 {
   "name": "Litmus Forms",
-  "short_name": "Litmus",
+  "short_name": "Litmus Forms",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
