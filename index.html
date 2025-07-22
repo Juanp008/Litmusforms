@@ -5,10 +5,14 @@
   <meta charset="UTF-8">
   <title>Litmus Forms</title>
   <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#2980b9"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/service-worker.js');
+        navigator.serviceWorker.register('/service-worker.js').then(reg => {
+          reg.update();
+        });
       });
     }
   </script>
@@ -21,10 +25,9 @@
       position: relative;
       margin: 0;
     }
-
     body::before {
       content: "";
-      background: url('https://i.imgur.com/jPEufpw.png') no-repeat center center;
+      background: url('https://i.imgur.com/mnmEGJj.png') no-repeat center center;
       background-size: 60%;
       opacity: 0.08;
       position: fixed;
@@ -34,18 +37,13 @@
       height: 100%;
       z-index: -1;
     }
-
-    h1 {
-      color: #2c3e50;
-    }
-
+    h1 { color: #2c3e50; }
     ul {
       list-style-type: none;
       padding: 0;
       max-width: 600px;
       margin: 0 auto;
     }
-
     li {
       margin: 20px 0;
       display: flex;
@@ -56,12 +54,10 @@
       border-radius: 12px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
-
     img {
       height: 70px;
       margin-right: 15px;
     }
-
     a {
       text-decoration: none;
       font-size: 18px;
@@ -69,40 +65,22 @@
       font-weight: bold;
       text-align: left;
     }
-
     a:hover {
       text-decoration: underline;
       color: #1f618d;
-    }
-
-    .footer {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      font-size: 14px;
-      text-align: right;
-    }
-
-    .footer a {
-      color: #2980b9;
-      text-decoration: none;
-    }
-
-    .footer a:hover {
-      text-decoration: underline;
     }
   </style>
 </head>
 <body>
   <h1>Litmus Forms</h1>
   <ul>
-    <li><img src="https://i.imgur.com/PlZEZC8.png" alt="Daily Log"><a href="https://form.jotform.com/251618252099663" target="_blank">Daily Log</a></li>
-    <li><img src="https://i.imgur.com/LkUvsU0.png" alt="Contractor Log"><a href="https://form.jotform.com/251618131579662" target="_blank">Contractor Log</a></li>
-    <li><img src="https://i.imgur.com/AGiNiKp.png" alt="Impact Notice"><a href="https://form.jotform.com/251189251467058" target="_blank">Impact Notice</a></li>
-    <li><img src="https://i.imgur.com/ggfpDQi.png" alt="Surface Rejection Form"><a href="https://form.jotform.com/251188242224048" target="_blank">Surface Rejection Form</a></li>
-    <li><img src="https://i.imgur.com/LqQ9nxf.png" alt="Project Completion"><a href="https://form.jotform.com/251188135283054" target="_blank">Project Completion</a></li>
-    <li><img src="https://i.imgur.com/wDOvRfU.png" alt="Subcontractor Payment"><a href="https://form.jotform.com/251187524720051" target="_blank">Subcontractor Request</a></li>
-    <li><img src="https://i.imgur.com/WjvvyaA.png" alt="Expense Reimbursement"><a href="https://form.jotform.com/251178640833055" target="_blank">Expense Reimbursement</a></li>
+    <li><img src="https://i.imgur.com/PlZEZC8.png" alt="Daily Log"><a href="https://www.jotform.com/excel/251757558795073" target="_blank">Daily Log</a></li>
+    <li><img src="https://i.imgur.com/LkUvsU0.png" alt="Contractor Log"><a href="https://www.jotform.com/excel/251757929678075" target="_blank">Contractor Log</a></li>
+    <li><img src="https://i.imgur.com/AGiNiKp.png" alt="Impact Notice"><a href="https://www.jotform.com/excel/251757397972071" target="_blank">Impact Notice</a></li>
+    <li><img src="https://i.imgur.com/ggfpDQi.png" alt="Surface Rejection Form"><a href="https://www.jotform.com/excel/251757451789068" target="_blank">Surface Rejection Form</a></li>
+    <li><img src="https://i.imgur.com/LqQ9nxf.png" alt="Project Completion"><a href="https://www.jotform.com/excel/251757568749073" target="_blank">Project Completion</a></li>
+    <li><img src="https://i.imgur.com/wDOvRfU.png" alt="Subcontractor Payment"><a href="https://www.jotform.com/excel/251758496831066" target="_blank">Subcontractor Request</a></li>
+    <li><img src="https://i.imgur.com/WjvvyaA.png" alt="Expense Reimbursement"><a href="https://www.jotform.com/excel/251757616593064" target="_blank">Expense Reimbursement</a></li>
   </ul>
   <div class="footer">
     <a href="mailto:admin@litmuspaintingservices...">support: admin@litmuspaintingservices...</a><br>
